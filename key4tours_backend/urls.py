@@ -5,9 +5,9 @@ from django.urls import path,include
 from django.conf.urls.static import static
 
 
-admin.site.site_header = "Key4Tours Admin"
-admin.site.site_title = "Key4Tours Admin Portal"
-admin.site.index_title = "Welcome to Key4Tours Portal"
+admin.site.site_header = "DesertWings Admin"
+admin.site.site_title = "DesertWings Admin Portal"
+admin.site.index_title = "Welcome to DesertWings Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -15,6 +15,7 @@ urlpatterns = [
     path('api/home/', include('package.urls')),
     path('api/booking/', include('booking.urls')),
     path('api/blog/', include('blogs.urls')),
+    path('api/b2b/', include('b2b.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
