@@ -1,13 +1,9 @@
 version: '3.7'
-
 services:
-  app:
-    build:
-      context: .
-    ports:
-      - "8081:8081"
+  web:
+    build: .
+    command: python manage.py runserver 0:8001
     volumes:
-      - ./app:/app
-    command: sh -c "python manage.py runserver 0.0.0.0:8081"
-    environment:
-      - DEBUG=1
+      - .:/app
+    ports:
+      - "8001:8001"
