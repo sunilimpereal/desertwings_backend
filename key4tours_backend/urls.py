@@ -16,6 +16,7 @@ urlpatterns = [
     path('api/booking/', include('booking.urls')),
     path('api/blog/', include('blogs.urls')),
     path('api/b2b/', include('b2b.urls')),
+    path('api/visa/', include('visa.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

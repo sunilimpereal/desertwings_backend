@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'package',
     'booking',
     'blogs',
+    'visa',
     'b2b'
 ]
 
