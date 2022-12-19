@@ -25,7 +25,7 @@ class AgentLoginView(APIView ):
         password = request.data['password']
         agent = Agent.objects.filter(email_id = email).first()
         if agent is None:
-            raise AuthenticationFailed('Student not found')
+            raise AuthenticationFailed('Agent not found')
         if not agent.password == password:
               raise AuthenticationFailed('Incorrect Password')
         else:
